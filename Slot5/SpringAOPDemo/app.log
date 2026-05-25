@@ -1,0 +1,47 @@
+2026-05-25 10:48:37 DEBUG AnnotationConfigApplicationContext:672 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@377f4fdc
+2026-05-25 10:48:37 DEBUG DefaultListableBeanFactory:225 - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2026-05-25 10:48:37 DEBUG ConfigurationClassParser:442 - Failed to read class file via ASM for determining @Bean method order
+org.springframework.core.type.classreading.ClassFormatException: ASM ClassReader failed to parse class file - probably due to a new Java class file version that is not supported yet. Consider compiling with a lower '-target' or upgrade your framework version. Affected class: class path resource [hsf301/fe/configs/AppConfig.class]
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:59) ~[spring-core-6.1.14.jar:6.1.14]
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48) ~[spring-core-6.1.14.jar:6.1.14]
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103) ~[spring-core-6.1.14.jar:6.1.14]
+	at org.springframework.core.type.classreading.CachingMetadataReaderFactory.getMetadataReader(CachingMetadataReaderFactory.java:122) ~[spring-core-6.1.14.jar:6.1.14]
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81) ~[spring-core-6.1.14.jar:6.1.14]
+	at org.springframework.context.annotation.ConfigurationClassParser.retrieveBeanMethodMetadata(ConfigurationClassParser.java:420) [spring-context-6.1.14.jar:6.1.14]
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:336) [spring-context-6.1.14.jar:6.1.14]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:246) [spring-context-6.1.14.jar:6.1.14]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:197) [spring-context-6.1.14.jar:6.1.14]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:165) [spring-context-6.1.14.jar:6.1.14]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:417) [spring-context-6.1.14.jar:6.1.14]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290) [spring-context-6.1.14.jar:6.1.14]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) [spring-context-6.1.14.jar:6.1.14]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) [spring-context-6.1.14.jar:6.1.14]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:789) [spring-context-6.1.14.jar:6.1.14]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:607) [spring-context-6.1.14.jar:6.1.14]
+	at org.springframework.context.annotation.AnnotationConfigApplicationContext.<init>(AnnotationConfigApplicationContext.java:93) [spring-context-6.1.14.jar:6.1.14]
+	at hsf301.fe.gui.ManyToOne.main(ManyToOne.java:13) [classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[?:?]
+	at org.codehaus.mojo.exec.AbstractExecJavaBase.executeMainMethod(AbstractExecJavaBase.java:402) [exec-maven-plugin-3.6.3.jar:3.6.3]
+	at org.codehaus.mojo.exec.ExecJavaMojo.executeMainMethod(ExecJavaMojo.java:142) [exec-maven-plugin-3.6.3.jar:3.6.3]
+	at org.codehaus.mojo.exec.AbstractExecJavaBase.doExecClassLoader(AbstractExecJavaBase.java:377) [exec-maven-plugin-3.6.3.jar:3.6.3]
+	at org.codehaus.mojo.exec.AbstractExecJavaBase.lambda$execute$0(AbstractExecJavaBase.java:287) [exec-maven-plugin-3.6.3.jar:3.6.3]
+	at java.base/java.lang.Thread.run(Thread.java:1474) [?:?]
+Caused by: java.lang.IllegalArgumentException: Unsupported class file major version 69
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:199) ~[spring-core-6.1.14.jar:6.1.14]
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:180) ~[spring-core-6.1.14.jar:6.1.14]
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:166) ~[spring-core-6.1.14.jar:6.1.14]
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:287) ~[spring-core-6.1.14.jar:6.1.14]
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:56) ~[spring-core-6.1.14.jar:6.1.14]
+	... 24 more
+2026-05-25 10:48:37 DEBUG DefaultListableBeanFactory:225 - Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerProcessor'
+2026-05-25 10:48:37 DEBUG DefaultListableBeanFactory:225 - Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerFactory'
+2026-05-25 10:48:37 DEBUG DefaultListableBeanFactory:225 - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2026-05-25 10:48:37 DEBUG DefaultListableBeanFactory:225 - Creating shared instance of singleton bean 'org.springframework.aop.config.internalAutoProxyCreator'
+2026-05-25 10:48:37 DEBUG DefaultListableBeanFactory:225 - Creating shared instance of singleton bean 'appConfig'
+2026-05-25 10:48:37 DEBUG ReflectiveAspectJAdvisorFactory:269 - Found AspectJ method: public void hsf301.fe.aspects.LoggingAspect.logBefore()
+2026-05-25 10:48:37 DEBUG ReflectiveAspectJAdvisorFactory:269 - Found AspectJ method: public void hsf301.fe.aspects.LoggingAspect.logAfter()
+2026-05-25 10:48:37 DEBUG DefaultListableBeanFactory:225 - Creating shared instance of singleton bean 'loggingAspect'
+2026-05-25 10:48:37 DEBUG DefaultListableBeanFactory:225 - Creating shared instance of singleton bean 'myService'
+2026-05-25 10:48:37 DEBUG LoggingAspect:19 - LoggingAspect: Before method Save Student()
+2026-05-25 10:48:37 DEBUG LoggingAspect:25 - LoggingAspect: After method Save Student()
